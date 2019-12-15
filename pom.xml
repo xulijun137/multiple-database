@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>multi-database</artifactId>
+    <artifactId>multiple-database</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>multi-database</name>
+    <name>multiple-database</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

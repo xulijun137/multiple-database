@@ -3,15 +3,14 @@ package com.example;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 @MapperScan("com.example.mapper") //扫描的mapper
-public class MultiDBApplication {
+public class MultipleDatabaseApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(MultiDBApplication.class, args);
+        SpringApplication.run(MultipleDatabaseApplication.class, args);
     }
 
 }
