@@ -30,13 +30,11 @@ public class DataSourceAop {
 
     @Before("readPointcut()")
     public void read() {
-
         DBContextHolder.slave();
     }
 
     @Before("writePointcut()")
     public void write() {
-
         DBContextHolder.master();
     }
 

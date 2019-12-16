@@ -16,34 +16,4 @@ class MultipleDatabaseApplicationTests {
     void contextLoads() {
     }
 
-    @Autowired
-    private IUserService IUserService;
-
-    @Test
-    public void testWrite() {
-        User user = new User();
-        user.setName("zhangsan");
-        IUserService.insert(user);
-    }
-
-    @Test
-    public void testRead() {
-        for (int i = 0; i < 4; i++) {
-            IUserService.selectAll();
-        }
-    }
-
-    @Test
-    public void testSave() {
-        User user = new User();
-        user.setName("wangwu");
-        IUserService.insert(user);
-    }
-
-    @Test
-    public void testReadFromMaster() {
-        IUserService.getToken("1234");
-    }
-
-
 }
