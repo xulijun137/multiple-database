@@ -1,12 +1,14 @@
 package com.example.bean;
 
 import com.example.enums.DBTypeEnum;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Slf4j
 public class DBContextHolder {
 
     private static final ThreadLocal<DBTypeEnum> contextHolder = new ThreadLocal<>();
-
     //计时器，每次自动增加1次
     private static final AtomicInteger counter = new AtomicInteger(-1);
 
@@ -20,7 +22,7 @@ public class DBContextHolder {
 
     public static void master() {
         set(DBTypeEnum.MASTER);
-        System.out.println("切换到master");
+        log.info("------------------ 切换到master -----------------");
     }
 
     public static void slave() {
@@ -31,10 +33,10 @@ public class DBContextHolder {
         }
         if (index == 0) {
             set(DBTypeEnum.SLAVE1);
-            System.out.println("切换到slave1");
+            log.info("------------------ 切换到slave1 -----------------");
         }else {
             set(DBTypeEnum.SLAVE2);
-            System.out.println("切换到slave2");
+            log.info("------------------ 切换到slave2 -----------------");
         }
     }
 

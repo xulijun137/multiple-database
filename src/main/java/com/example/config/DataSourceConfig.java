@@ -48,6 +48,7 @@ public class DataSourceConfig {
         MyRoutingDataSource myRoutingDataSource = new MyRoutingDataSource();
         myRoutingDataSource.setDefaultTargetDataSource(masterDataSource);
         myRoutingDataSource.setTargetDataSources(targetDataSources);
+
         return myRoutingDataSource;
     }
 
