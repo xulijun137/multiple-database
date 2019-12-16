@@ -10,7 +10,7 @@ public interface UserMapper {
 
     int insert(User user);
 
-    List<User>  selectAll();
+    List<User> selectAll();
 
-    User  selectById(Long id);
+    User selectById(Long id);
 }
